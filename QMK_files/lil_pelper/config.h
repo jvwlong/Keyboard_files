@@ -17,7 +17,7 @@
 
 /* key matrix pins */
 #define MATRIX_ROW_PINS { C6, B4, B5 }
-#define MATRIX_COL_PINS { B1, B3, B2 }
+#define MATRIX_COL_PINS { B1, B2, B3 }
 #define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
