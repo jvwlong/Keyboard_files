@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_ENT,           KC_LGUI,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, LOWER,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    KC_LEFT, KC_SPC, KC_BSPC,                    KC_DOWN,  KC_UP, KC_RIGHT
+                                    LOWER,    KC_SPC, KC_BSPC,                    KC_DOWN, KC_UP,   RAISE
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -138,9 +138,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     }
     else if (index == 1) {
         if (clockwise) {
-            tap_code(KC_VOLU);
+            tap_code(KC_RIGHT);
         } else {
-            tap_code(KC_VOLD);
+            tap_code(KC_LEFT);
         }
     }
 }
